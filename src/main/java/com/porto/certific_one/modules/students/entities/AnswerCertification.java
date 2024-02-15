@@ -12,7 +12,8 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "tb_answer_certification")
+@Entity
+@Table(name = "tb_answer_certification")
 public class AnswerCertification {
 
     @Id
@@ -34,10 +35,10 @@ public class AnswerCertification {
     @JoinColumn(name = "student_id", insertable = false, updatable = false)
     private Student student;
 
-    @JoinColumn(name = "question_id")
+    @Column(name = "question_id")
     private UUID questionID;
 
-    @JoinColumn(name = "answer_id")
+    @Column(name = "answer_id")
     private UUID answerID;
 
     private Boolean isCorrect;

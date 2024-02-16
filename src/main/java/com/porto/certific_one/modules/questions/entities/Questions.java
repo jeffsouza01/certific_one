@@ -1,5 +1,6 @@
 package com.porto.certific_one.modules.questions.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,6 +27,7 @@ public class Questions {
     private String description;
 
     @OneToMany
+    @JsonIgnore
     @JoinColumn(name = "question_id")
     private List<Alternatives> alternatives;
 

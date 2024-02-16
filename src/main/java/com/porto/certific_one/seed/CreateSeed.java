@@ -19,10 +19,10 @@ public class CreateSeed {
     public static void main(String[] args) {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
-        dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/ps_nlw");
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("container-porto");
+        //dataSource.setDriverClassName("org.postgresql.Driver");
+        dataSource.setUrl("jdbc:h2:mem:db_nlw");
+        dataSource.setUsername("sa");
+        dataSource.setPassword("sa");
 
         CreateSeed createSeed = new CreateSeed(dataSource);
         createSeed.run();

@@ -27,8 +27,7 @@ public class Questions {
     private String description;
 
     @OneToMany
-    @JsonIgnore
-    @JoinColumn(name = "question_id")
+    @JoinColumn(name = "question_id", insertable = false, updatable = false)
     private List<Alternatives> alternatives;
 
     @CreationTimestamp
